@@ -6,6 +6,9 @@
     import type { PageData, PageProps } from "./$types";
     import ResultImage from "$lib/components/ResultImage.svelte";
     import ResultContainer from "$lib/components/ResultContainer.svelte";
+    import { redirect } from "@sveltejs/kit";
+    import { goto } from "$app/navigation";
+    import { page } from "$app/state";
 
     let { data }: PageProps = $props();
 
@@ -58,7 +61,15 @@
 {:else}
     <ResultContainer>
         {#each data.generated as gen (gen.id)}
-            <ResultImage id={gen.id} />
+            <ResultImage
+                id={gen.id}
+                regenerate={() => {
+                    const url = new URL("variations", page.url);
+                    url.searchParams.set("id", gen.id);
+                    url.searchParams.set("templateId", data.template.id);
+                    goto(url);
+                }}
+            />
         {/each}
     </ResultContainer>
 {/if}

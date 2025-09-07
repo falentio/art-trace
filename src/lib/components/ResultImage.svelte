@@ -6,10 +6,11 @@
     interface Props {
         id: string | Promise<string | undefined>;
         original?: ImageData;
+        regenerate?: () => void;
         withDownload?: boolean;
     }
 
-    const { id, original, withDownload = true }: Props = $props();
+    const { id, original, regenerate, withDownload = true }: Props = $props();
     const rss = $derived(
         resource(
             () => id,
@@ -61,8 +62,8 @@
         </div>
     </div>
     <div class="flex gap-2 justify-center">
-        {#if original}
-            <Button size="icon" variant="outline">
+        {#if regenerate}
+            <Button size="icon" variant="outline" onclick={regenerate}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"

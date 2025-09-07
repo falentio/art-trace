@@ -17,5 +17,6 @@ export const SGenerateRequest = v.object({
 		uri: v.pipe(v.string(), v.url()),
 		mimeType: vv.shortText(),
 	}),
+	variation: v.optional(v.boolean(), false),
 });
 export type GenerateRequest = v.InferOutput<typeof SGenerateRequest>;

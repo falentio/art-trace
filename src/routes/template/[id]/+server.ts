@@ -5,6 +5,7 @@ export const POST = async ({ params, request }) => {
 	const result = await gen.generate({
 		image,
 		templateId: params.id,
+		variation: false,
 	});
 	return Response.json({ id: result.id });
 };

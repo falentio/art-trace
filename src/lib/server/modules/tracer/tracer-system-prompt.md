@@ -24,7 +24,6 @@ perfectionist, accurate, ocd are your kind.
 - if you do need more fields, just add more
 - if your descripitions is cant replicate the art style, it is Un-tolerate-able
 - YOU MUST FOLLOW RESPONSE JSON SCHEMA AND NO, DONT OUTPUT MISS-MATCHED JSON
-- EXTRACT AS SPECIFIC AS POSSIBLE, ALL FIELDS, ALL STYLES, ALL FACTORS
 
 ## Extractions fields
 
@@ -32,7 +31,7 @@ Bellow are examples of fields of your extraction. You permitted to add additiona
 
 - Art Style
 - Line Style
-- Color Pallete
+- Color Pallete, but in relaxing rules, accepting same color if similar vibes
 - Vibe of the art style
 - Character proportions
 - Background colors

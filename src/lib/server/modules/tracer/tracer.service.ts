@@ -39,12 +39,13 @@ export class TracerService {
 		mimeType: string;
 	}[]) {
 		const response = await this.genai.models.generateContent({
-			model: "gemini-2.5-flash",
+			model: "gemini-2.5-pro",
 			contents: [
 				createUserContent([
 					...images.map(img => createPartFromUri(img.uri, img.mimeType)),
 					JSON.stringify({
-						task: "Describe the art styles in the images provided.",
+						task:
+							"Describe the art styles in the images provided. Provide a JSON object with keys as art style parts and values as lists of descriptors. Use sub-keys for more specific descriptions.",
 						notes: ["you must follow the response schema strictly", "follow all rules in system prompt"],
 					}),
 				]),
@@ -56,6 +57,7 @@ export class TracerService {
 					thinkingBudget: 16096,
 				},
 				maxOutputTokens: 16096,
+				temperature: 0.5,
 				systemInstruction: tracerSystemPrompt,
 			},
 		});
@@ -77,10 +79,10 @@ export class TracerService {
 		const response = await this.genai.models.generateContent({
 			model: "gemini-2.5-flash-lite",
 			contents: [
-				createUserContent([
-					text,
+				createUserContent(text),
+				createUserContent(
 					"Based on art styles above, please create conclusion about the art style, you must describe as compact as possible within 1 sentence with maximum 30 words and minimum 20 words.",
-				]),
+				),
 			],
 		});
 		if (!response.text) {

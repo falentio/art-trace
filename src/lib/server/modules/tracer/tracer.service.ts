@@ -57,7 +57,6 @@ export class TracerService {
 					thinkingBudget: 16096,
 				},
 				maxOutputTokens: 16096,
-				temperature: 0.5,
 				systemInstruction: tracerSystemPrompt,
 			},
 		});

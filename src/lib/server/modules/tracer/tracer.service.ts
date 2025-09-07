@@ -79,10 +79,10 @@ export class TracerService {
 		const response = await this.genai.models.generateContent({
 			model: "gemini-2.5-flash-lite",
 			contents: [
-				createUserContent(text),
-				createUserContent(
+				createUserContent([
+					text,
 					"Based on art styles above, please create conclusion about the art style, you must describe as compact as possible within 1 sentence with maximum 30 words and minimum 20 words.",
-				),
+				]),
 			],
 		});
 		if (!response.text) {

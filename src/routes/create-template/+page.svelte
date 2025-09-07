@@ -3,10 +3,17 @@
     import GenaiFile from "$lib/components/GenaiFile.svelte";
     import Button from "$lib/components/ui/button/button.svelte";
     import type { ImageData } from "$lib/types";
+    import { between } from "drizzle-orm";
+    import { resource } from "runed";
 
     let urls: ImageData[] | null = $state(null);
     let files: FileList | null = $state(null);
     let loading = $state(false);
+    let rss = resource(
+        () => [] as ImageData[] | null,
+        async (urls) => createTemplate(urls!),
+        { lazy: true },
+    );
 
     async function createTemplate(images: ImageData[]) {
         const res = await fetch("/create-template", {
@@ -21,7 +28,14 @@
     }
 </script>
 
-<h1 class="text-2xl font-bold mb-4">Create Template</h1>
+<div class="mb-4">
+    <h1 class="text-2xl font-bold">Create Template</h1>
+    <span class="text-muted-foreground">
+        Upload your images that represent the art styles you want to trace, you
+        can upload multiple images. Upload between 5 to 10 images for maximum
+        result
+    </span>
+</div>
 
 <GenaiFile bind:urls bind:files bind:loading />
 
@@ -49,8 +63,10 @@
         <p>No files uploaded yet.</p>
     {/if}
 </div>
+{#if rss.loading}
+    <div>Creating template...</div>
+{/if}
 
-<Button
-    disabled={!(!loading && urls?.length)}
-    onclick={() => createTemplate(urls!)}>Trace art style</Button
+<Button disabled={rss.loading || !urls?.length} onclick={() => rss.refetch()}
+    >Trace art style</Button
 >

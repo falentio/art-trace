@@ -1,66 +1,13 @@
 {
-  "Art Style": [
-    "Monochrome pencil sketch/drawing",
-    "Anime and Manga-influenced aesthetic, specifically leaning towards modern Japanese shonen and shojo styles, but with a semi-realistic rendering approach.",
-    "Expressive character portraits with a focus on facial details and hair texture.",
-    "Blend of traditional Japanese animation aesthetics with a more refined, detailed, and shaded illustrative style, departing from typical flat anime coloring.",
-    "Strong emphasis on dynamic hair rendering with individual strands and volume.",
-    "Varying degrees of realism in facial features, from more exaggerated shonen expressions to softer, idealized, and more delicate features for female characters."
-  ],
-  "Line Style": [
-    "Primarily defined by clear, confident pencil outlines that vary in thickness, often thicker for dominant contours and finer for internal details.",
-    "Shading achieved through visible, deliberate pencil strokes, including parallel hatching, cross-hatching, and subtle blending.",
-    "Textural line work is prominent, particularly in hair and clothing, conveying material and volume.",
-    "Hair is rendered with numerous individual, flowing lines to depict movement, texture, and volume.",
-    "Facial features utilize crisp, precise lines for eyes, eyebrows, nose, and lips, providing strong definition.",
-    "Softer, feathered lines are used for gradual tonal transitions in skin and highlights, particularly on softer areas of the face.",
-    "Line work for clothing and accessories often shows distinct folds and material texture through shading lines."
-  ],
-  "Color Pallete": [
-    "Monochromatic grayscale, ranging from pure white highlights to deep blacks for shadows and strong outlines.",
-    "Extensive use of mid-tones and a broad spectrum of grays, demonstrating rich tonal depth and contrast.",
-    "The inherent color of the paper (likely off-white or light cream) acts as the lightest base tone, providing a warm undertone to the overall cool grayscale.",
-    "Strong contrast is employed to define forms, direct the viewer's eye, and convey mood (e.g., sharp contrast for intense expressions, softer transitions for delicate features).",
-    "Absence of color emphasizes form, texture, and light/shadow interaction."
-  ],
-  "Vibe of the art style": [
-    "Intense and serious, particularly for the male character portraits, conveying determination, power, or mystery.",
-    "Elegant and refined for the female character portraits, often with a hint of modern fashion or a serene allure.",
-    "Energetic and dynamic, especially in hair rendering and some expressive faces.",
-    "Sophisticated and professional, showcasing high-level draftsmanship and attention to detail.",
-    "Contemporary and appealing to fans of modern Japanese pop culture (anime/manga)."
-  ],
-  "Character proportions": [
-    "Character heads are generally proportional to a semi-realistic human scale, with slight idealizations.",
-    "Male characters typically feature strong jawlines, defined cheekbones, and slightly broader builds, reflecting idealized shonen hero aesthetics.",
-    "Female characters exhibit more delicate and softer facial structures, with smaller chins, higher cheekbones, and often larger, more expressive eyes, consistent with idealized shojo or modern anime female proportions.",
-    "Eyes are generally larger and more expressive than purely realistic proportions, a common trait in anime/manga, but not overly exaggerated to a chibi style.",
-    "The overall head-to-body ratio is not fully discernible as only busts are shown, but the heads themselves maintain a relatively consistent, semi-realistic to idealized anime proportion."
-  ],
-  "Background colors": [
-    "Neutral, light tones, primarily off-white, light gray, or very pale cream, consistent with the base color of the drawing paper.",
-    "Absence of strong background colors ensures that the character remains the central focus."
-  ],
-  "Background styles": [
-    "Minimalist and unfocused, primarily serving to isolate the character portrait.",
-    "Often features subtle, soft pencil shading or smudging that creates a gentle vignette effect around the character, indicating a faint light source or depth.",
-    "Some backgrounds show loose, parallel, or cross-hatched pencil strokes, providing a slight textural element without specific detail or form.",
-    "The backgrounds are consistently sparse, lacking intricate details or environmental elements, maintaining focus on the subject."
-  ],
-  "Art theme": [
-    "Character portraiture, with a strong emphasis on capturing personality and emotion through facial expressions and intricate hair rendering.",
-    "Homage to popular Japanese anime and manga series (One Piece, Jujutsu Kaisen, Naruto) through character selection, blended with a distinctive fan-art illustrative approach.",
-    "Focus on aesthetic appeal and detailed rendering of human forms within a graphic, stylized context.",
-    "Exploration of dynamic lighting and shadow on facial planes."
-  ],
-  "Time Background": [
-    "Contemporary, as the art style reflects modern illustrative techniques and is inspired by currently popular media.",
-    "The implied settings of the source material (e.g., modern fantasy for Jujutsu Kaisen, undefined adventurous era for One Piece) are contemporary within their respective fictional universes.",
-    "The style itself does not suggest a historical period but rather a current artistic trend in character illustration."
-  ],
-  "Story background": [
-    "Heavily influenced by popular Japanese Shonen Manga and Anime narratives. Characters are recognizable from series such as One Piece, Jujutsu Kaisen, and Naruto.",
-    "The aesthetic subtly implies a world of action, adventure, and fantasy, often with elements of supernatural abilities or martial arts, characteristic of Shonen genres.",
-    "While specific cultural attire is absent, the overall stylistic traits (character designs, expressive faces) are deeply rooted in the visual storytelling conventions of Japanese animation and comics, rather than specific traditional cultural stories."
-  ]
+  "Art Style": "Modern Japanese anime/manga, specifically 'school life' or 'slice of life' genre. It's a 2D digital art style characterized by clean lines and cel-shaded rendering with subtle soft gradients for depth on characters, contrasted with more simplified and illustrative backgrounds. The overall aesthetic is bright and polished, often seen in visual novels or contemporary animation.",
+  "Line Style": "Lines are consistently thin, crisp, and smooth, with no visible sketchiness or rough textures. Character outlines are predominantly black, but internal lines or details within colored areas (like hair strands) often use a slightly darker shade of the fill color. Background elements sometimes feature thinner or less defined outlines, or are entirely lineless, allowing them to recede and emphasize the characters.",
+  "Color Palette": "The color palette is vibrant and bright, yet harmoniously balanced, avoiding harsh or overly saturated tones. It predominantly features warm skin tones, lively blues for skies, various greens for foliage, and soft browns/greys for architectural elements. Character colors are more saturated and diverse, making them stand out. Shading primarily uses cel-shading with soft, airbrushed-like gradients for gentle transitions, particularly noticeable in hair, skin, and fabric folds. Eyes feature intricate multi-layered gradients and prominent specular highlights. Background colors are often slightly desaturated compared to foreground elements to enhance depth.",
+  "Vibe of the art style": "The art style evokes a lighthearted, serene, and youthful vibe. It's characterized by a sense of gentle optimism, innocence, and everyday charm, often conveying feelings of peace, nostalgia, and pleasant school life. The overall mood is uplifting and inviting, typical of comforting slice-of-life narratives.",
+  "Character proportions": "Characters adhere to standard anime proportions, typically around 1:6 to 1:7 head-to-body ratio, emphasizing a slender and graceful build common for young female characters. Facial features include large, expressive eyes with detailed irises and multiple highlights, a small and delicate nose, and a soft, slightly pointed jawline. Limbs are long and slender. Hands are depicted with fine, delicate fingers, while feet are proportionally rendered, often covered by school shoes.",
+  "Background colors": "Background colors are generally softer, brighter, and slightly desaturated compared to the foreground characters, effectively creating depth and focusing attention on the subjects. Dominant colors include light sky blues, various shades of green for natural elements, and muted browns, greys, and whites for architectural structures. There's often a touch of soft pink, indicative of cherry blossoms, contributing to a cheerful atmosphere.",
+  "Background styles": "Backgrounds are stylized and simplified, rendered with clear perspective but reduced textural detail compared to characters. Architectural elements like school buildings are depicted cleanly with flat colors and minimal shading. Natural elements such as trees and grass are more illustrative, utilizing blocks of color and soft, airbrushed or watercolor-like textures rather than intricate individual details. Depth is achieved through atmospheric perspective, where distant elements are lighter and less saturated. The backgrounds consistently depict typical Japanese school environments (classrooms, school buildings, outdoor courtyards, cherry blossom trees), reinforcing the art's thematic context.",
+  "Art theme": "The overarching art theme is 'Japanese school life' or 'slice of life,' centered around the daily experiences and youthful innocence of students. Common motifs include iconic Japanese school uniforms (sailor fuku or blazer styles), traditional school architecture, cherry blossom trees, and everyday school items like bento boxes, strongly anchoring the art within a specific cultural and narrative setting.",
+  "Time Background": "The implied time background is contemporary Japan, or a slightly idealized version thereof, not set in a specific historical period. The lighting consistently suggests a bright, clear daytime environment, often sunny, with even illumination in indoor scenes. This contributes to the overall lighthearted and pleasant mood of the art style.",
+  "Story background": "The art style is deeply influenced by and rooted in modern Japanese culture, specifically the 'school life' genre prevalent in anime, manga, and visual novels. The consistent depiction of Japanese school uniforms, architecture, and cultural symbols like cherry blossoms points to narratives typically centered on themes of friendship, youth, everyday adventures, and personal growth within a high school setting in Japan.",
+  "Poses of subject": "Subject poses are a mix of natural and casual, ranging from relaxed standing and walking to subtle movements like running or reaching. Poses are generally moderately expressive, conveying emotion through body language and subtle gestures rather than exaggerated drama. Characters are typically depicted individually, often facing towards the viewer or engaged in simple, everyday interactions with props (e.g., holding a bento box). Camera angles are predominantly eye-level or slightly high-angle, providing a clear and engaging view of the characters and their immediate environment."
 }

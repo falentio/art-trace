@@ -10,15 +10,10 @@ export const TraceDescriptors = v.pipe(
 			v.record(
 				v.string(),
 				v.pipe(
-					v.array(
-						v.pipe(
-							v.string(),
-							v.description(
-								"We prefer descriptors as compact as possible and relevant with sub-descriptors, but we don't limit how much descriptors ",
-							),
-						),
+					v.string(),
+					v.description(
+						"We prefer descriptors as compact as possible and relevant with sub-descriptors, but we don't limit how much descriptors ",
 					),
-					v.description("List of descriptors for the art style part. "),
 				),
 			),
 			v.description("A mapping of sub-descriptors for more specific descriptions."),
@@ -41,22 +36,22 @@ export class TracerService {
 		const response = await this.genai.models.generateContent({
 			model: "gemini-2.5-flash",
 			contents: [
-				createUserContent([
-					...images.map(img => createPartFromUri(img.uri, img.mimeType)),
-					JSON.stringify({
-						task: "Describe the art styles in the images provided.",
-						notes: ["you must follow the response schema strictly", "follow all rules in system prompt"],
-					}),
-				]),
+				createUserContent({
+					text: tracerSystemPrompt,
+				}),
+				createUserContent(
+					images.map(img => createPartFromUri(img.uri, img.mimeType)),
+				),
+				createUserContent(
+					"{\"task\":\"Describe the art styles in the images provided. Provide a JSON object with keys as art style parts and values as lists of descriptors. Use sub-keys for more specific descriptions.\"}",
+				),
 			],
 			config: {
-				responseSchema: toJsonSchema(TraceDescriptors),
+				responseJsonSchema: toJsonSchema(TraceDescriptors),
 				thinkingConfig: {
 					includeThoughts: false,
-					thinkingBudget: 16096,
+					thinkingBudget: 2096,
 				},
-				maxOutputTokens: 16096,
-				systemInstruction: tracerSystemPrompt,
 			},
 		});
 		if (!response.text) {
@@ -77,10 +72,10 @@ export class TracerService {
 		const response = await this.genai.models.generateContent({
 			model: "gemini-2.5-flash-lite",
 			contents: [
-				createUserContent([
-					text,
-					"Based on art styles above, please create conclusion about the art style, you must describe as compact as possible within 1 sentence with maximum 30 words and minimum 20 words.",
-				]),
+				createUserContent(text),
+				createUserContent(
+					"Based on art styles above, please create conclusion about the art style, you must describe as compact as possible within 1 sentence with maximum 20 words.",
+				),
 			],
 		});
 		if (!response.text) {

@@ -39,13 +39,12 @@ export class TracerService {
 		mimeType: string;
 	}[]) {
 		const response = await this.genai.models.generateContent({
-			model: "gemini-2.5-pro",
+			model: "gemini-2.5-flash",
 			contents: [
 				createUserContent([
 					...images.map(img => createPartFromUri(img.uri, img.mimeType)),
 					JSON.stringify({
-						task:
-							"Describe the art styles in the images provided. Provide a JSON object with keys as art style parts and values as lists of descriptors. Use sub-keys for more specific descriptions.",
+						task: "Describe the art styles in the images provided.",
 						notes: ["you must follow the response schema strictly", "follow all rules in system prompt"],
 					}),
 				]),

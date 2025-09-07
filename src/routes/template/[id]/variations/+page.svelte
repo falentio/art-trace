@@ -1,5 +1,6 @@
 <script lang="ts">
     import { browser } from "$app/environment";
+    import { goto } from "$app/navigation";
     import { page } from "$app/state";
     import ResultContainer from "$lib/components/ResultContainer.svelte";
     import ResultImage from "$lib/components/ResultImage.svelte";
@@ -29,6 +30,10 @@
         );
     });
 </script>
+
+<div class="flex mb-2">
+    <Button onclick={() => goto("..", { replaceState: true })}>Back</Button>
+</div>
 
 <div class="w-32 mx-auto">
     <ResultImage

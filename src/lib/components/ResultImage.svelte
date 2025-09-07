@@ -44,6 +44,8 @@
                     src={`/image/${rss.current}`}
                     alt="Generated "
                     class="max-w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                 />
             {:else}
                 <Skeleton class="size-full"></Skeleton>

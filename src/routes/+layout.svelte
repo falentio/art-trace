@@ -12,6 +12,5 @@
 </svelte:head>
 
 <div class="min-h-dvh flex flex-col p-4 max-w-3xl w-full mx-auto">
-  <Button href="..">Back</Button>
   {@render children?.()}
 </div>

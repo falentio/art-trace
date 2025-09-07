@@ -34,6 +34,9 @@
     });
 </script>
 
+<div class="flex mb-2">
+    <Button onclick={() => goto("../..", { replaceState: true })}>Back</Button>
+</div>
 <div class="gap-2 flex flex-col mb-4">
     <h1 class="text-2xl font-bold">{data.template.title}</h1>
     <span class="text-muted-foreground">{data.template.description}</span>

@@ -28,6 +28,9 @@
     }
 </script>
 
+<div class="flex mb-2">
+    <Button onclick={() => goto("..", { replaceState: true })}>Back</Button>
+</div>
 <div class="mb-4">
     <h1 class="text-2xl font-bold">Create Template</h1>
     <span class="text-muted-foreground">

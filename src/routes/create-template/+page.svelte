@@ -11,7 +11,7 @@
     let loading = $state(false);
     let rss = resource(
         () => [] as ImageData[] | null,
-        async (urls) => createTemplate(urls!),
+        async () => createTemplate(urls!),
         { lazy: true },
     );
 
